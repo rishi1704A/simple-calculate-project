@@ -1,0 +1,106 @@
+/* General styling */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #84fab0, #8fd3f4); /* Light pastel gradient */
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+.calculator {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+}
+
+#display {
+    font-size: 2.5em;
+    text-align: right;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #f0f4f8;
+    color: #333;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.btn {
+    font-size: 1.5em;
+    border-radius: 15px;
+    padding: 20px;
+    background-color: #e0e7ff; /* Soft blue */
+    border: none;
+    color: #4a4a4a;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn.operator {
+    background-color: #ffab91; /* Soft coral for operators */
+    color: white;
+}
+
+.btn.equal {
+    background-color: #4caf50; /* Green for equal button */
+    color: white;
+    grid-column: span 2;
+    box-shadow: 0px 4px 12px rgba(76, 175, 80, 0.3);
+}
+
+.btn:hover {
+    background-color: #d4d9ff; /* Lighter shade on hover */
+    transform: scale(1.05); /* Scale effect on hover */
+}
+
+.btn.operator:hover {
+    background-color: #ff7043; /* Darker coral on hover for operators */
+}
+
+.btn.equal:hover {
+    background-color: #388e3c; /* Darker green on hover */
+}
+
+#ac {
+    background-color: #f44336; /* Red for AC button */
+    color: white;
+}
+
+#ac:hover {
+    background-color: #d32f2f; /* Darker red on hover */
+}
+
+#square, #modulo, #divide, #multiply, #subtract, #add {
+    color: white;
+}
+
+/* Add animation to buttons */
+.btn:active {
+    transform: scale(0.95);
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+#display {
+    transition: all 0.3s ease;
+}
+
+/* Responsive design */
+@media only screen and (max-width: 600px) {
+    .calculator {
+        max-width: 320px;
+    }
+    .btn {
+        padding: 15px;
+    }
+}
